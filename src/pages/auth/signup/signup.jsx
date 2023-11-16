@@ -42,7 +42,7 @@ export default function Signup() {
       <Box
         sx={{
           bgcolor: "#006CEA",
-          height: "100vh",
+          height: "auto",
           width: { sm: "100%", md: "40%" },
           display: "flex",
           flexDirection: "column",
@@ -82,7 +82,7 @@ export default function Signup() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: {sm: 'auto', md: '100vh'},
         }}
       >
         {step === "1" && <AccountType step={step} setStep={setStep} />}
