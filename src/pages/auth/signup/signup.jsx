@@ -37,13 +37,14 @@ export default function Signup() {
   return (
     <Box
       display="flex"
-      sx={{ flexDirection: { xs: "column", sm: "column", md: "row" } }}
+      sx={{ flexDirection: { xs: "column", sm: "column", md: "row" }, minHeight: '100vh', height: '100%' }}
     >
       <Box
         sx={{
           bgcolor: "#006CEA",
-          height: "auto",
+          // height: {sm: 'auto', md: '100%'},
           width: { sm: "100%", md: "40%" },
+          height: 'auto',
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -53,7 +54,7 @@ export default function Signup() {
         <Box sx={{mt: "1rem"}}>
           <img src={logo} alt="" />
         </Box>
-        <Box>
+        <Box sx={{my: '2rem'}}>
           {signupTabs.map((tab, index) => (
             <Box>
               <SignupTabs tabInfo={tab} step={step} setStep={setStep} />
@@ -82,7 +83,8 @@ export default function Signup() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: {sm: 'auto', md: '100vh'},
+          height: {sm: 'auto', md: '100%'},
+          placeSelf: 'center'
         }}
       >
         {step === "1" && <AccountType step={step} setStep={setStep} />}

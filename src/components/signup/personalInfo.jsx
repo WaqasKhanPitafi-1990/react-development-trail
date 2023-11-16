@@ -3,6 +3,7 @@ import React from "react";
 import google from "../../assets/images/google.svg";
 import apple from "../../assets/images/apple.svg";
 import { Form, useNavigate } from "react-router-dom";
+import './style.css'
 
 export default function PersonalInfo() {
   const navigate = useNavigate()
